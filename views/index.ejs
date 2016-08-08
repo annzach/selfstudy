@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta charset="utf-8">
+  <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CONTACT LIST</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" 
+  integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.14.1/moment.min.js"></script>
+
+  <script src="main.js"></script>
+</head>
+<body>
+    <div class="container">
+      <h1 id="title">Contacts</h1><br>
+        <div class="form-group">
+            <input type="text" class="form-control" id="firstname" placeholder="First Name" required><br>
+            <input type="email" class="form-control" id="email" placeholder="Email"><br>
+            <input type="phonenumber" class="form-control" id="phoneNum" placeholder="phone"><br>
+        </div>
+        <button type="submit" class="btn btn-success" id = "submitbtn" name="button">Add Contact</button>
+       
+    </div>
+
+<div class="container">
+<div class="row">
+<div class="col-xs-12"></div> 
+<table id="contactTable" class="table">
+        <thead>
+          <tr>
+            <th>Firstname</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Account Creation</th>
+          </tr>
+        </thead>
+        <tbody id ="tbody">
+          <tr id="template" class='hidden'>
+            <td class ="name"></td>
+            <td class ="email"></td>
+            <td class ="phoneNum"></td>
+            <td class ="createdAt"></td>
+            <td><button class ="btn btn-primary editBtn">EDIT</button></td>
+            <td><button class ="btn btn-danger delete">X</button></td>
+          </tr>
+        </tbody>
+      </table>
+</div>
+  </div>
+
+
+<div id="editModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Edit Contact</h4>
+      </div>
+     
+      <div class="modal-body">
+        <div class="form-group">
+
+            <input type="text" class="form-control" id="eFirstname" placeholder="First Name" required><br>
+            
+
+            <input type="email" class="form-control" id="eEmail" placeholder="Email"><br>
+            <input type="number" class="form-control" id="ePhoneNum" placeholder="phone">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button id="deleteContact" type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+        <button id="applyChanges" type="button" class="btn btn-success" data-dismiss="modal">Apply Change</button>
+      </div>
+  
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
